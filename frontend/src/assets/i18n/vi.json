@@ -1,0 +1,29 @@
+{
+    "SIDEBAR": {
+        "DASHBOARD": "Tổng quan",
+        "MONITORING": "Giám sát & Bản đồ",
+        "STATIONS": "Trạm & Thiết bị",
+        "DATA_IMPORT": "Nhập Dữ Liệu",
+        "POLLUTION_SOURCES": "Nguồn điểm ô nhiễm",
+        "ALERTS": "Cảnh báo & Rủi ro",
+        "FORECAST": "Dự báo (AI/ML)",
+        "ANALYTICS": "Phân tích & Báo cáo",
+        "SETTINGS": "Cấu hình hệ thống"
+    },
+    "HEADER": {
+        "SEARCH": "Tìm kiếm trạm...",
+        "NOTIFICATIONS": "Thông báo",
+        "LANGUAGE": "Ngôn ngữ",
+        "VI": "Tiếng Việt",
+        "EN": "English",
+        "PROFILE": "Hồ sơ cá nhân",
+        "LOGOUT": "Đăng xuất"
+    },
+    "COMMON": {
+        "SAVE": "Lưu",
+        "CANCEL": "Hủy",
+        "DELETE": "Xóa",
+        "EDIT": "Sửa",
+        "VIEW_ALL": "Xem tất cả"
+    }
+}

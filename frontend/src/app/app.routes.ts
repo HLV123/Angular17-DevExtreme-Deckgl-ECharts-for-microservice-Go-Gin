@@ -1,0 +1,50 @@
+import { Routes } from '@angular/router';
+import { authGuard } from './core/guards/auth.guard';
+
+export const routes: Routes = [
+  { path: 'auth/login', loadComponent: () => import('./features/auth/login/login.component').then(m => m.LoginComponent) },
+  {
+    path: '',
+    loadComponent: () => import('./shared/components/layout/layout.component').then(m => m.LayoutComponent),
+    canActivate: [authGuard],
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', loadComponent: () => import('./features/dashboard/dashboard.component').then(m => m.DashboardComponent) },
+      { path: 'map/realtime', loadComponent: () => import('./features/map/realtime/map-realtime.component').then(m => m.MapRealtimeComponent) },
+      { path: 'map/history', loadComponent: () => import('./features/map/history/map-history.component').then(m => m.MapHistoryComponent) },
+      { path: 'map/forecast', loadComponent: () => import('./features/map/forecast/map-forecast.component').then(m => m.MapForecastComponent) },
+      { path: 'map/sources', loadComponent: () => import('./features/map/sources/map-sources.component').then(m => m.MapSourcesComponent) },
+      { path: 'map/3d', loadComponent: () => import('./features/map/deck3d/map-deck3d.component').then(m => m.MapDeck3dComponent) },
+      { path: 'monitoring/realtime', loadComponent: () => import('./features/monitoring/realtime/monitoring-realtime.component').then(m => m.MonitoringRealtimeComponent) },
+      { path: 'monitoring/station/:id', loadComponent: () => import('./features/monitoring/station-detail/station-detail.component').then(m => m.StationDetailComponent) },
+      { path: 'monitoring/compare', loadComponent: () => import('./features/monitoring/compare/compare.component').then(m => m.CompareComponent) },
+      { path: 'alerts/active', loadComponent: () => import('./features/alerts/active/alerts-active.component').then(m => m.AlertsActiveComponent) },
+      { path: 'alerts/history', loadComponent: () => import('./features/alerts/history/alerts-history.component').then(m => m.AlertsHistoryComponent) },
+      { path: 'alerts/config', loadComponent: () => import('./features/alerts/config/alerts-config.component').then(m => m.AlertsConfigComponent) },
+      { path: 'forecast/dashboard', loadComponent: () => import('./features/forecast/dashboard/forecast-dashboard.component').then(m => m.ForecastDashboardComponent) },
+      { path: 'forecast/models', loadComponent: () => import('./features/forecast/models/forecast-models.component').then(m => m.ForecastModelsComponent) },
+      { path: 'forecast/evaluation', loadComponent: () => import('./features/forecast/evaluation/forecast-evaluation.component').then(m => m.ForecastEvaluationComponent) },
+      { path: 'analytics/reports', loadComponent: () => import('./features/analytics/reports/analytics-reports.component').then(m => m.AnalyticsReportsComponent) },
+      { path: 'analytics/pivot', loadComponent: () => import('./features/analytics/pivot/analytics-pivot.component').then(m => m.AnalyticsPivotComponent) },
+      { path: 'analytics/trends', loadComponent: () => import('./features/analytics/trends/analytics-trends.component').then(m => m.AnalyticsTrendsComponent) },
+      { path: 'analytics/compliance', loadComponent: () => import('./features/analytics/compliance/analytics-compliance.component').then(m => m.AnalyticsComplianceComponent) },
+      { path: 'stations/list', loadComponent: () => import('./features/stations/list/stations-list.component').then(m => m.StationsListComponent) },
+      { path: 'stations/devices', loadComponent: () => import('./features/stations/devices/stations-devices.component').then(m => m.StationsDevicesComponent) },
+      { path: 'sources', loadComponent: () => import('./features/sources/sources.component').then(m => m.SourcesComponent) },
+      { path: 'community/submit', loadComponent: () => import('./features/community/submit/community-submit.component').then(m => m.CommunitySubmitComponent) },
+      { path: 'community/manage', loadComponent: () => import('./features/community/manage/community-manage.component').then(m => m.CommunityManageComponent) },
+      { path: 'community/lookup', loadComponent: () => import('./features/community/lookup/community-lookup.component').then(m => m.CommunityLookupComponent) },
+      { path: 'admin/users', loadComponent: () => import('./features/admin/users/admin-users.component').then(m => m.AdminUsersComponent) },
+      { path: 'admin/roles', loadComponent: () => import('./features/admin/roles/admin-roles.component').then(m => m.AdminRolesComponent) },
+      { path: 'admin/api-keys', loadComponent: () => import('./features/admin/api-keys/admin-api-keys.component').then(m => m.AdminApiKeysComponent) },
+      { path: 'admin/integrations', loadComponent: () => import('./features/admin/integrations/admin-integrations.component').then(m => m.AdminIntegrationsComponent) },
+      { path: 'admin/webhooks', loadComponent: () => import('./features/admin/webhooks/admin-webhooks.component').then(m => m.AdminWebhooksComponent) },
+      { path: 'admin/system', loadComponent: () => import('./features/admin/system/admin-system.component').then(m => m.AdminSystemComponent) },
+      { path: 'admin/health', loadComponent: () => import('./features/admin/health/admin-health.component').then(m => m.AdminHealthComponent) },
+      { path: 'admin/audit-log', loadComponent: () => import('./features/admin/audit-log/admin-audit-log.component').then(m => m.AdminAuditLogComponent) },
+      { path: 'profile', loadComponent: () => import('./features/profile/profile.component').then(m => m.ProfileComponent) },
+      { path: 'data-import', loadComponent: () => import('./features/data-import/data-import.component').then(m => m.DataImportComponent) }
+    ]
+  },
+  { path: '**', redirectTo: 'dashboard' },
+];

@@ -1,0 +1,29 @@
+{
+    "SIDEBAR": {
+        "DASHBOARD": "Dashboard",
+        "MONITORING": "Monitoring & Map",
+        "STATIONS": "Stations & Devices",
+        "DATA_IMPORT": "Data Import",
+        "POLLUTION_SOURCES": "Pollution Sources",
+        "ALERTS": "Alerts & Risks",
+        "FORECAST": "Forecast (AI/ML)",
+        "ANALYTICS": "Analytics & Reports",
+        "SETTINGS": "System Settings"
+    },
+    "HEADER": {
+        "SEARCH": "Search stations...",
+        "NOTIFICATIONS": "Notifications",
+        "LANGUAGE": "Language",
+        "VI": "Tiếng Việt",
+        "EN": "English",
+        "PROFILE": "Profile",
+        "LOGOUT": "Logout"
+    },
+    "COMMON": {
+        "SAVE": "Save",
+        "CANCEL": "Cancel",
+        "DELETE": "Delete",
+        "EDIT": "Edit",
+        "VIEW_ALL": "View all"
+    }
+}

@@ -1,0 +1,15 @@
+export const environment = {
+  production: false,
+  useMockData: true,
+  apiUrl: 'http://localhost:8080/api/v1',
+  wsUrl: 'ws://localhost:8080',
+  mqttUrl: 'ws://localhost:9001',
+  grpcUrl: 'http://localhost:9090',
+  mapboxToken: 'YOUR_MAPBOX_TOKEN',
+  defaultCity: 'Hà Nội',
+  defaultCenter: [105.8542, 21.0285] as [number, number],
+  refreshInterval: 60000,
+  keycloakUrl: 'http://localhost:8180',
+  keycloakRealm: 'urban-air',
+  keycloakClientId: 'urban-air-web',
+};
